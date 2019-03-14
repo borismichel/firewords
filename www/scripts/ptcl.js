@@ -23,3 +23,40 @@ class Particle {
         this.acc.add(vF);
     }
 }
+
+class NamesPlosion {
+    constructor(x, y, name){
+        this.pos = createVector(x, y);
+        this.pV = [];
+        this.vV = [];
+        this.log=true;
+        var pts = font.textToPoints(name, x, y, 200);
+        console.log(pts);
+        for (var i=0; i < pts.length; i++) {
+            this.vV.push(createVector((pts[i].x-600)/100, (pts[i].y-200)/100))
+        }
+        for (var i=0; i < pts.length; i++) {
+            push()
+            this.pV.push(createVector(x, y));
+            pop()
+        }
+        console.log(this.pV);
+        console.log(this.vV);
+    }
+
+    show() {
+        fill(color(this.color, 200, 255));
+        for(let i=0; i < this.pV.length; i++) {
+            ellipse(this.pV[i].x, this.pV[i].y, 10)
+        }
+
+    }
+
+    update() {
+        for(let i=0; i < this.pV.length; i++) {
+            this.pV[i].add(this.vV[i]);
+            this.pV[i].add(this.vV[i]);
+        }
+
+    }
+}
