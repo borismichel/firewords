@@ -13,7 +13,7 @@ function setup() {
     createCanvas(800, 600)
     grvt = createVector(0, 0.5);
     p = new Particle();
-    n = new NamesPlosion(width/2, height/2, 'VANJICH');
+    n = new NamesPlosion(width/2, height/2, '50.00€');
 }
 
 function draw() {
