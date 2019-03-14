@@ -11,6 +11,7 @@ class Particle {
     show() {
         fill(color(this.color, 200, 255));
         stroke(color(this.color, 200, 255));
+        noStroke();
         if(this.rocket&&!this.boom) {
             ellipse(this.pos.x, this.pos.y, 5);
         } else {
@@ -67,11 +68,11 @@ class NamesPlosion {
     }
 
     show() {
-        this.lifespan -= 5;
-        if (this.lifespan>0) {
+        if (this.lifespan>-20) {
+            this.lifespan -= 3.5;
             for(let i=0; i < this.pV.length; i++) {
                 // ellipse(this.pV[i].x, this.pV[i].y, this.lifespan/5)
-                strokeWeight(3);
+                strokeWeight(5);
                 stroke(this.color, 255, 255, this.lifespan)
                 point(this.pV[i].x, this.pV[i].y);
             }
