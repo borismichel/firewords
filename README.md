@@ -9,10 +9,12 @@ To do so:
 1) Download the repo and unpack
 2) Open a shell and navigate to the repo folder.
 3) run `npm install` to download and install express
-4) run ´npm start´
-5) open ´http://localhost:666´ in a browser
+4) run `npm start`
+5) open `http://localhost:3300` in a browser
 
 If you want to just plug and play you will find everything in the *www/* folder. 
+
+If you want to demo this open `https://firewords.herokuapp.com` in your browser. You can pass a parameter using URL queries to print your own words (e.g. `https://firewords.herokuapp.com?My%20Great%20Word` don't worry about URL encoding).
 
 A few things to note:
 
