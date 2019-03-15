@@ -2,7 +2,7 @@ var p;
 var grvt;
 var font;
 var path;
-var boomName = (!window.location.search.slice(1)) ? 'Firewords!' : window.location.search.slice(1);
+var boomName = (!window.location.search.slice(1)) ? 'Firewords!' : decodeURIComponent(window.location.search.slice(1));
 var rockets = [];
 
 function preload() {
