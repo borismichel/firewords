@@ -62,9 +62,6 @@ class NamesPlosion {
             this.vV.push(createVector((pts[i].x-(this.maxX/2))/20, (pts[i].y-(this.maxY/2))/20))
             this.pV.push(createVector(x, y));
         }
-        
-        console.log(this.maxX);
-        console.log(this.maxY);
     }
 
     show() {
