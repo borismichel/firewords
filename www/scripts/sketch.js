@@ -4,6 +4,15 @@ var font;
 var path;
 var boomName = (!window.location.search.slice(1)) ? 'Firewords!' : decodeURIComponent(window.location.search.slice(1));
 var rockets = [];
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+w = w*0.95;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+h=h*0.95;
 
 function preload() {
     font = loadFont('../assets/Sniglet-ExtraBold.ttf');
@@ -12,7 +21,7 @@ function preload() {
 function setup() {
     console.log(window.location.search.slice(1));
     colorMode(HSB, 255);
-    createCanvas(800, 600)
+    createCanvas(w, h)
     grvt = createVector(0, 0.18);
 }
 
