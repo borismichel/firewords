@@ -14,8 +14,6 @@ To do so:
 
 If you want to just plug and play you will find everything in the *www/* folder. 
 
-If you want to demo this open `https://firewords.herokuapp.com` in your browser. You can pass a parameter using URL queries to print your own words (e.g. `https://firewords.herokuapp.com?My%20Great%20Word` don't worry about URL encoding).
-
 A few things to note:
 
 variable ´boomName´ contains the word that is "printed" (default "P5.js").
